@@ -1,8 +1,10 @@
-# CS-STUDY
+# CS STUDY
+
+> BE 꿈나무들의 CS interview study🌱 
 
 since 2022.07~
 
-BE 꿈나무들의 CS interview study🌱
+<br>
 
 ### 📅 Schedule 
 - 매주 일요일 AM 10:30 ~ 12:00
