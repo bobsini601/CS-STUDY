@@ -15,12 +15,12 @@ since 2022.07~
 
 
 ### 👨‍👨‍👧‍👧Member
-- 박신희 @bobsini601
-- 조용장 @dydwkd486
-- 함정빈
-- 김준호 @7unho
+- 박신희 [@bobsini601](https://github.com/bobsini601)
+- 조용장 [@dydwkd486](https://github.com/dydwkd486)
+- 함정빈 [@Jeongbin233](https://github.com/Jeongbin233)
+- 김준호 [@7unho](https://github.com/7unho)
 - 최동혁
-- 윤혜진
+- 윤혜진 [@yoon0223](https://github.com/yoon0223)
 
 
 
