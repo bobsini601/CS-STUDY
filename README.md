@@ -21,7 +21,7 @@ since 2022.07~
 - 김준호 [@7unho](https://github.com/7unho)
 - 최동혁
 - 윤혜진 [@yoon0223](https://github.com/yoon0223)
-
+- 이재호 [@Jaeho-Lee96](https://github.com/Jaeho-Lee96)
 
 
 📌📋📚
