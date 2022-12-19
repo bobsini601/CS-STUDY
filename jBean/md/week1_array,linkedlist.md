@@ -290,11 +290,12 @@ public LinkedList(){
 - 원형 리스트
 - 원형 이중 연결 리스트
 
-- 그림 및 코드 출처:
+
+### 그림 및 코드 출처:
 
 [https://github.com/HyeminNoh/Tech-Stack/blob/master/docs/DataStructure/LinkedList.md](https://github.com/HyeminNoh/Tech-Stack/blob/master/docs/DataStructure/LinkedList.md)
 
-- 참고 자료
+### 참고 자료
     - [https://freestrokes.tistory.com/84](https://freestrokes.tistory.com/84)
     - [https://github.com/gyoogle/tech-interview-for-developer/blob/master/Computer Science/Data Structure/Linked List.md](https://github.com/gyoogle/tech-interview-for-developer/blob/master/Computer%20Science/Data%20Structure/Linked%20List.md)
     - [https://github.com/kho903/CS_STUDY/tree/master/Data Structure/02. 연결 리스트](https://github.com/kho903/CS_STUDY/tree/master/Data%20Structure/02.%20%EC%97%B0%EA%B2%B0%20%EB%A6%AC%EC%8A%A4%ED%8A%B8)
