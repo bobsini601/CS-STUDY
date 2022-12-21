@@ -45,7 +45,7 @@ a[2] = 20
 
 # 📌 Linked List
 
-![스크린샷 2022-08-03 오전 2.29.25.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f11f036e-ff00-41f9-b31f-fdf93c387e0f/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-08-03_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_2.29.25.png)
+![week1_0.png](week1_0.png)
 
 ### 👀 특징
 
@@ -153,7 +153,7 @@ public LinkedList(){
     - 머리에 노드를 삽입할 때
         - 리스트가 비어 있을 경우, 리스트가 비어 있지 않을 경우 모두 해당
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ccc94c40-7182-4214-a190-bbf5df9f726c/Untitled.png)
+        ![Untitled](week1_1.png)
         
         - 노드 생성
             - 삽입될 노드의 포인터: 맨 처음 노드로 설정
@@ -161,7 +161,7 @@ public LinkedList(){
     
     - 중간에 노드를 삽입할 때(꼬리 노드 삽입 포함)
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/92ef3032-7652-4a29-916e-31035ea23c5a/Untitled.png)
+        ![Untitled](week1_2.png)
         
         - 노드 생성
         - 삽입될 위치 이전까지 탐색
@@ -193,14 +193,14 @@ public LinkedList(){
     
     - 머리 노드 삭제
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/79e13064-eb2e-4935-929d-334a3703a1ab/Untitled.png)
+        ![Untitled](week1_3.png)
         
         - head를 삭제할 노드의 다음 노드를 가리키게 함
         - 삭제할 노드 해제
         
     - 중간 노드 삭제(꼬리 노드 삭제 포함)
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8ee71df3-1f25-43b2-a5f2-eda99d0e3e50/Untitled.png)
+        ![Untitled](week1_4.png)
         
         - 삭제할 노드 이전 노드까지 탐색
         - 이전 노드의 포인터를 삭제할 노드가 참조하던 노드로 변경
@@ -269,7 +269,7 @@ public LinkedList(){
 
 ## 📌 Doubly Linked List
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/499a6e7e-5d36-4974-9ea2-7206975d5425/Untitled.png)
+![Untitled](week1_5.png)
 
 ### 👀 특징
 
