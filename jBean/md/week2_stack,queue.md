@@ -8,7 +8,7 @@
 - LIFO(Last In First Out), 후입선출 구조
 - 구현은 배열 또는 연결리스트를 활용
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7f1dc576-cbe7-43a4-a7e1-b1eaf0f4d13f/Untitled.png)
+![Untitled](../assets/week2_0.png)
 
 ### ✨ 활용법
 
@@ -55,7 +55,7 @@
 - 구현은 배열 또는 연결리스트 활용
 - 스택을 두 개 연결하면 큐를 만들 수 있음
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e1dbaaf4-7b64-4e90-a20a-eab95a81ba33/Untitled.png)
+![Untitled](../assets/week2_1.png)
 
 ### ✨ 활용법
 
