@@ -13,6 +13,7 @@
 - 대표적인 연산 : push(), pop()
 
 ## [java] method
+---
 
 | name | return type | TimeComplexity | 설명 |
 | --- | --- | --- | --- |
@@ -30,6 +31,8 @@
 
 즉, peek 은 top에 뭐가 있는지 알려주는 것이고 pop은 꺼내서 주는 것입니다.
 
+<aside>
+
 ```java
 import java.util.Stack;
 
@@ -46,42 +49,51 @@ public class StackTest {
 }
 
 ```
+</aside>
 
-![넣어진 순서대로라고 생각했지만, top에 있는 값을 1로하고 시작
-](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bb60d4a8-1877-46f6-b0c8-ebde0c9560b0/B483900D-846F-4B38-BBFE-DD158B66D4ED.jpeg)
+<br>
 
+<div>
+<img src="../assets/week2_1.jpeg" width="300"/>
+<p>
 넣어진 순서대로라고 생각했지만, top에 있는 값을 1로하고 시작
+</p>
+</div>
+
+<br> 
 
 > <그림> stack 의 push와 pop하는 과정
-> 
 
 ![stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. → 스택 메모리상의 변경이 없어야 하기 때문에
-](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/94e841e0-e08d-4a93-bd3d-ded7f99acc4d/Untitled.png)
+](../assets/week2_2.png)
 
 stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. → 스택 메모리상의 변경이 없어야 하기 때문에
 
 > 메모리를 높은 주소에서 낮은 주소로 할당받는 이유
-> 
 
 1. 스택이 낮은 주소에서 높은 주소로 데이터가 저장될 경우, 큰 데이터들이 저장되어 스택이 커진다면, 커널 영역을 침범할 수 있기 때문에 (커널영역 보호)?
 2. 공유 라이브러리 영역을 기준으로 서로 마주보는 형태가 되면 메모리 낭비를 줄일 수 있기 떄문
 
-“이 그림 2개는 메모리 맵에 대한 그림입니다.”
+
+
+> “이 그림 2개는 메모리 맵에 대한 그림입니다.”
 
 1. 추가 설명
 
-![메모리맵 낮은 주소에서 높은 주소로 쌓이게 되다보면 커널영역을 침범합니다.](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/54ce2667-a5bc-48c3-8050-96528f79a0bb/BF6C3603-2542-4486-85BD-6E12CBC9DD96.jpeg)
+    <img src="../assets/week2_3.jpeg" width="300"/>
+    <p>
+    메모리맵 낮은 주소에서 높은 주소로 쌓이게 되다보면 커널영역을 침범합니다.
+    </p>
 
-메모리맵 낮은 주소에서 높은 주소로 쌓이게 되다보면 커널영역을 침범합니다.
 
-1. 추가 설명
+2. 추가 설명
     
-    ![힙은 낮은주소에서 높은 주소로 쌓이고
-    스택은 높은주소에서 낮은주소로 쌓임으로써, 그 사이 남는 공간인 공유 라이브러리영역을 최대한 활용할 수 있습니다. ](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6a6e9cf0-bd76-4057-a848-a6a8c034e217/6274B138-8DA3-4914-A04A-AF48A6235014.jpeg)
+    <img src="../assets/week2_4.jpeg" width="300"/>
     
     힙은 낮은주소에서 높은 주소로 쌓이고
     스택은 높은주소에서 낮은주소로 쌓임으로써, 그 사이 남는 공간인 공유 라이브러리영역을 최대한 활용할 수 있습니다. 
     
+
 
 > reference
 > 
@@ -95,6 +107,8 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
 [](https://www.hackerschool.org/Sub_Html/HS_University/BOF/essential/PDF_Files/15.pdf)
 
 [메모리 구조 [Memory Structure]](https://st-lab.tistory.com/198)
+
+<br>
 
 ### 🤜 **스택이 활용되는 곳**
 
@@ -131,7 +145,7 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
         
         이렇게 스택의 모든 공간을 다 차지하고 난 후 더 이상의 여유 공간이 없을 때 또 다시 스택 프레임을 저장하게 되면(함수 호출을 계속한다면), 해당 데이터는 스택 영역을 넘어가서 저장되게 됩니다.
         
-        ![재귀함수를 무한으로 호출할 경우, stack overflow가 발생하는 과정](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2e8624a6-2a94-4a5e-8722-5e9c7739a41a/Untitled.png)
+        <img src="../assets/week2_5.png"/>
         
         재귀함수를 무한으로 호출할 경우, stack overflow가 발생하는 과정
         
@@ -140,13 +154,13 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
 
 ---
 
-<aside>
-💡 FIFO ( First In First Out) 방식의 자료구조
+> 💡 FIFO ( First In First Out) 방식의 자료구조
 
-</aside>
 
 - 정해진 곳(top)에서만 자료의 삽입과 삭제가 이루어지는 스택과는 다르게 큐는 Rear부분에서 자료의 삽입이, Front부분에서 자료의 삭제가 이루어집니다.
 - 리스트의 한쪽 끝에서는 원소들의 삭제만 이루어지고 반대쪽 끝에서는 원소들의 삽입만 가능하게 만든 순서화된 리스트
+
+<br>
 
 ### ✨큐 관련 용어
 
@@ -180,6 +194,7 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
     
     큐의 크기 리턴
     
+<br>
 
 ### ✨ 큐 시간복잡도
 
@@ -190,6 +205,8 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
 - 검색: O(N)
 
 ※ 큐의 삽입은 front에서만 일어나고 삭제는 항상 rear에서만 일어나므로삽입과 삭제에 소요되는 시간복잡도는 O(1)로 고정
+
+<br>
 
 ## java [method]
 
@@ -215,7 +232,7 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
         
         배열로 구현 시 크기가 제한되어 있고 빈 공간을 사용하려면 모든 자료를 꺼내거나 자료를 한 칸씩 옮겨야 한다는 단점이 있고 많은 수의 enqueue 및 dequeue 작업이 있는 경우 어느 시점에서 큐가 비어있어도 자료를 삽입하지 못하는 경우가 발생한다.
         
-        ![6078EF24-F38E-4DBD-8E89-6D297D604674.jpeg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/37dc03b8-4998-469f-a5cb-33d054bd10ff/6078EF24-F38E-4DBD-8E89-6D297D604674.jpeg)
+        <img src="../assets/week2_8.jpeg"/>
         
     - 원형 큐 (Circular Queue)
         
@@ -223,13 +240,13 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
         
         환형 큐는 1차원 배열 형태의 큐를 원형(Circular)으로 구성하여 `배열의 처음과 끝을 연결`하여 만든다. 
         
-        ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7e86b84a-31d8-4376-93c7-d2ded156aecc/Untitled.png)
+        <img src="../assets/week2_6.png"/>
         
         삽입할 때 선형 큐와 다른 점이라고 한다면, 데이터가 삭제된 부분에도 다시 삽입이 가능하다는 점이다.위 배열에서 A와 B를 지우고 다시 삽입을 한다고 하면, 데이터를 다시 삽입할 때 A와 B자리에도 데이터를 삽입할 수 있다.
         
-        단, **원형 큐의 경우에는 배열이 꽉차있는지, 비어있는지를 구분하기 위하여 한 칸의 공백은 무조건 있어야 한다.**위 배열에서 E, F, G를 삽입 했다면 한 칸이 남음에도 불구하고 front가 가리키는 위치에는 데이터를 삽입할 수 없다.
+        단, **원형 큐의 경우에는 배열이 꽉차있는지, 비어있는지를 구분하기 위하여 한 칸의 공백은 무조건 있어야 한다.** 위 배열에서 E, F, G를 삽입 했다면 한 칸이 남음에도 불구하고 front가 가리키는 위치에는 데이터를 삽입할 수 없다.
         
-        ![선형 큐와 동일](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dd44ed18-04ad-4aa2-b182-5397c4ff8c8c/Untitled.png)
+        <img src="../assets/week2_7.png"/>
         
         선형 큐와 동일
         
@@ -251,13 +268,8 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
 - **너비 우선 탐색(BFS) 알고리즘**
 
 ## Heap
-
 ---
-
-<aside>
-💡 완전이진트리 형식의 자료구조
-
-</aside>
+> 💡 완전이진트리 형식의 자료구조
 
 - 자료구조에 들어있는 데이터들의 최대값 혹은 최소값을 빠르게 찾아내기 위해 고안되었다.
 - Top 연산으로 현재 상태의 최대값(혹은 최소값)을 확인할 수 있다.
@@ -278,11 +290,11 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
 - 데이터의 삽입은 다음 프로세스로 이루어져요
     
     > 가장 끝의 자리에 노드 삽입그 노드와 부모 노드를 비교하여 규칙(최대/최소)에 맞으면 보존, 아니면 교환규칙에 맞을 때까지 2번 과정 반복
-    > 
+    
 - 데이터의 삭제는 루트 노드만 가능하며, 다음 프로세스로 이루어져요
     
     > 루트 노드(최상위 노드)를 제거그 자리에 가장 마지막 노드 삽입올라간 노트와 자식 노드들을 비교(최대 힙) 부모보다 더 큰 자식들 중 큰 값과 교환, 없으면 종료(최소 힙) 부모보다 더 작은 자식들 중 작은 값과 교환, 없으면 종료4번을 반복
-    > 
+    
 
 힙을 저장하는 표준적인 자료구조는 배열이다.일반적으로 구현을 쉽게 하기 위해 `index 0` 사용하지 않고, 루트 노드를 `index 1`에 위치시킨다.
 
@@ -290,8 +302,10 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
 - i번째 노드의 왼쪽 자식 노드 index: 2 * i
 - i번째 노드의 오른쪽 자식 노드 index: 2 * i + 1
 
+
+<br>
+
 > ref
-> 
 
 [Stack , Queue, Heap 의 구조와 메모리 영역에 대한 이해](https://ddunnimlabs.tistory.com/104)
 
@@ -303,8 +317,8 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
 
 [CS 공부 - [스택] - Kyun2da Blog](https://kyun2da.github.io/2021/01/12/stack/)
 
+
 > heap
-> 
 
 [[Data Structure] Heap](https://huilife.tistory.com/25)
 
@@ -313,6 +327,5 @@ stack은 메모리를 높은주소에서 낮은주소로 할당받습니다. →
 [[CS 기초 - 자료구조] Heap](https://velog.io/@deannn/CS-%EA%B8%B0%EC%B4%88-%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-Heap)
 
 > queue
-> 
 
 [[자료구조] 큐(Queue)](https://velog.io/@kang9366/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0-%ED%81%90Queue)
