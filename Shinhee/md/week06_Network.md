@@ -15,7 +15,7 @@
 
 ---
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d84d4635-8bb7-4654-8123-6e7ae501ca0c/Untitled.png)
+<img src="../assets/week6_1.png"/>
 
 - **PAN ( Personal Area Network )** : 가장 작은 규모의 네트워크
     
@@ -61,7 +61,7 @@
 
 ---
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c52fec72-59ef-45e9-a578-77718b8758da/Untitled.png)
+<img src="../assets/week6_2.png"/>
 
 - 유니 캐스트 : 네트워크에 다수의 대상이 있을 때 그중 특정 대상이랑만 `1:1` 통신하는 방법
 - 멀티 캐스트 : 네트워크에 다수의 대상이 있을 때, 그중 특정 대상들이랑만 `1:N` 통신하는 방법
@@ -72,17 +72,16 @@
 
 ---
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d886dced-3324-4d91-aeba-cbbb717dcb4f/Untitled.png)
+<img src="../assets/week6_3.png" width=400px/>
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2fca06c5-18ac-47ea-a0bb-cdde5e182244/Untitled.png)
+<img src="../assets/week6_4.png" width=400px/>
+
 
 ### Layer 1. 물리계층 (Physical Layer)
-
 ---
 
 <aside>
 💡 0과 1로 되어있는 데이터를 전기신호로 바꿔주는 계층
-
 </aside>
 
 - 사용되는 통신 단위는 `**비트(bit)**`이며 이것은 1과 0으로 나타내어진다.
@@ -95,7 +94,6 @@
 - 논리 데이터 구조(높은 수준의 기능)를 기초로 하는 필수 계층이다.
 
 ### Layer 2. 데이터 링크 계층 ( DataLink Layer)
-
 ---
 
 - 전송 단위는 `**Frame**`이다.(**프레임에 Mac 주소를 부여**하고 **에러검출, 재전송, 흐름제어** 진행)
@@ -107,7 +105,6 @@
 - **Mac 주소**를 통해 통신한다.
 
 ### Layer 3. 네트워크 계층 (Network Layer)
-
 ---
 
 <aside>
@@ -169,13 +166,13 @@
 - TCP/IP는 인터넷 프로토콜 중 가장 중요한 역할을 하는 TCP와 IP의 합성어로 데이터의 흐름 관리, 정확성 확인, 패킷의 목적지 보장을 담당한다.
     - **데이터의 정확성 확인은 TCP가, 패킷을 목적지까지 전송하는 일은 IP가 담당한다.**
 
+
 ### Layer 6. 표현 계층 (Presentation Layer)
 
 ---
 
 <aside>
 💡 응용 계층에서 내린 명령, 발송한 데이터 등을 어떻게 표현할지 정해주는 계층
-
 </aside>
 
 - 표현 계층의 단위는 `**DATA`/ `Message`**
@@ -183,6 +180,7 @@
 - 코드 간의 번역을 담당하여 사용자 시스템에서 데이터의 형식상 차이를 다루는 부담을 응용 계층으로부터 덜어준다.
 - MIME 인코딩이나 암호화 등의 동작이 이루어진다.
 - 압축과 암호를 담당
+
 
 ### Layer 7. 응용 계층 (Application Layer)
 
@@ -199,22 +197,32 @@ ex,우리가 사용하는 웹 브라우저, 어플 등등에서 하는 활동
 - 사용자 인터페이스, 전자우편, 데이터베이스 관리 등의 서비스를 제공한다.
 - 편지를 발송하는 과정 중 편지를 작성하는 과정을 응용계층에서 담당
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7d34c610-ccab-4516-8394-2c555b48b9dc/Untitled.png)
+<br>
+
+---
+
+<img src="../assets/week6_5.png"/>
+
+<br>
+<br>
+<br>
+<br>
 
 ## 📡 TCP/IP 5계층
 
 ---
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7e8c87ab-8eeb-4503-acd6-d13641b44b25/Untitled.png)
+<img src="../assets/week6_6.png"/>
+
+<br>
 
 <aside>
 💡 위에서 ISO(국제표준화기구)가 데이터 통신의 규격과 프로토콜을 통일하려고 OSI 참조 모델을 만들었다고 했다. 사실 이 시도는 실패하였고, 현재 세계에서 표준으로 받아들여지는 것은 TCP/IP 모델이다.
-
 </aside>
 
 ---
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/478b35bd-25ef-465d-871f-5bbf101892f6/Untitled.png)
+<img src="../assets/week6_7.png"/>
 
 ### 📌 L5 | Application
 
@@ -243,7 +251,7 @@ ex,우리가 사용하는 웹 브라우저, 어플 등등에서 하는 활동
     - TCP는 데이터를 안전하고 확실하게 전달하는 것을 목적으로 정확성이 요구되는 서비스에 사용된다.
     - UDP는 데이터를 빠르게 전송하는 것이 목적으로 TCP보다 절차가 단순하고 속도가 빠르다.UDP는 데이터의 전송속도가 중요한 서비스에 사용된다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d4f1674f-5637-40ed-9b67-106babc437cc/Untitled.png)
+<img src="../assets/week6_8.png"/>
 
 ### Port Number
 
@@ -297,24 +305,19 @@ ex,우리가 사용하는 웹 브라우저, 어플 등등에서 하는 활동
 - Decoding: 아날로그 신호를 받으면 0과 1로 해석한다.
 - 물리적, 기계적, 전기적 기능으로 HW에 구현되어 있다.
 
-> ref
-> 
+<br>
 
+> ref
 ---
 
 네트워크란
-
 ---
-
 [[Network] 네트워크란 무엇인가? 네트워크의 정의와 종류 총정리](https://coding-factory.tistory.com/340)
 
 OSI 7계층
-
 ---
-
 [[CS] 📕 Network](https://velog.io/@soosungp33/CS-Network)
 
-> OSI 5계층
-> 
-
+OSI 5계층
+---
 [OSI 7계층 & TCP/IP 5계층](https://velog.io/@jwkim/cs-nw-osi-tcp-ip)

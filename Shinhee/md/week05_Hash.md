@@ -2,12 +2,12 @@
 
 ---
 
-<aside>
+<p>
 💡 유사한 개체 그룹에서 특정 개체를 고유하게 식별하는 데 사용되는 기술로, 키(key)에 산술적인 연산을 적용하여 항목이 저장되어 있는 테이블의 주소를 계산하여 항복에 접근한다.
-
-</aside>
+</p>
 
 - 해시 함수 (hash function)을 사용하여 데이터를 해시 테이블 (hash table)에 저장하고 검색하는 기법
+
 
 ## 📌 해시 함수 (hash function)
 
@@ -19,11 +19,12 @@
 
 ex. SHA (Secure Hash Algorithm) 알고리즘
 
-<aside>
+<p>
 💡 해싱에서 사용하는 자료구조는 `배열`과 `Linked List`의 조합으로 되어 있습니다.
 저장할 데이터의 키를 해시함수에 넣으면 `배열`의 한 요소를 얻게 되고, 다시 그 곳에 연결되어 있는 `Linked List`에 저장하게 됩니다.
+</p>
 
-</aside>
+<br>
 
 ## 📌 해시 테이블 (hash table)
 
@@ -31,7 +32,7 @@ ex. SHA (Secure Hash Algorithm) 알고리즘
 
 ### 🤜 해시 테이블의 시간복잡도
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aaf89033-76bb-4246-9298-7d857597ff4f/Untitled.png)
+<img src="../assets/week5_1.png"/>
 
 **😀 충돌이 일어나지 않았으면 (평균적인 경우)**
 
@@ -93,7 +94,7 @@ Java에서 HashTable과 HashMap의 차이는 `**동기화 지원 여부**`이다
 
 체이닝(Chaining)은 자료 저장 시, 저장소(bucket)에서 충돌이 일어나면 해당 값을 기존 값과 연결시키는 기법이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/930db9db-59ff-415e-b464-5098cc4426fe/Untitled.png)
+<img src="../assets/week5_2.png"/>
 
 위의 사진에서 Sandra를 저장할 때 충돌이 일어났고, 기존에 있던 John에 연결시켰다. 이 때 연결리스트(Linked List) 자료구조를 이용한다. 다음에 저장된 자료를 기존의 자료 다음에 위치시키는 것이다.
 
@@ -166,6 +167,7 @@ m/n = α (α <= 1)
 따라서 Open Addressing에서는 비어있는 공간을 확보하는 것(= 저장소가 어느 정도 채워졌을 때 저장소의 사이즈를 늘려주는 것)이 필요하다.
 
 최악의 경우 저장소를 모두 살펴보아야 하는 경우가 생길 수 있다.(O(n))
+
 
 > ref
 > 

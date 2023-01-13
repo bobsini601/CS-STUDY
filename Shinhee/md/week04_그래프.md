@@ -12,16 +12,19 @@
 - 그래프
 - 트리
 
-# 📌 그래프
+<br>
 
----
+
+# 📌 그래프
 
 <aside>
 💡 정점(vertex)들과 이 정점들을 연결하는 간선(edge)들로 구성된 비선형 자료구조
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5313ab31-5413-4b34-8e94-be9b9faad59e/Untitled.png)
+<img src="../assets/week4_1.png"/>
 
 </aside>
+
+<br>
 
 ## 🤜 관련 용어
 
@@ -38,6 +41,8 @@
     - `경로 길이 (path length)` : 경로를 구성하는데 사용된 간선의 수
 - `사이클 (cycle)` : 단순 경로의 시작 정점과 종료 정점이 동일한 경우
 
+<br>
+
 ## 🤜 특징
 
 ---
@@ -52,6 +57,8 @@
 - 간선의 유무는 그래프에 따라 다르다.
 - 순회는 DFS나 BFS로 이루어진다.
 
+<br>
+
 ## 🤜 종류
 
 ---
@@ -62,16 +69,13 @@
 
 - **유향 그래프(Directed Graph)**
     - **방향성이 있는** 간선들로 이루어진 그래프
-    
-    ![**화살표의 방향대로만 이동이 가능**](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ba417a1-ac4a-4983-ae12-8cba4a55a47a/Untitled.png)
-    
+    <img src="../assets/week4_01.png"/>
     **화살표의 방향대로만 이동이 가능**
     
+
 - **무향 그래프(Undirected Graph)**
     - **방향성이 없는** 간선들로 이루어진 그래프
-    
-    ![무방향 그래프는 방향 그래프와 다르게 **양방향 이동이 가능**하다.](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1f9295c5-4da0-4549-bfc6-c71738c929d0/Untitled.png)
-    
+    <img src="../assets/week4_02.png"/>
     무방향 그래프는 방향 그래프와 다르게 **양방향 이동이 가능**하다.
     
 
@@ -79,38 +83,34 @@
 👉 - A에서 D로 가고싶다!
    유향그래프의 최단경로 : {A→B→E→D}
    무향그래프의 최단경로 : {A→C→D}       (물론, A→B→E→D 가능!)
-
 </aside>
+
+<br>
 
 ### 순환(cycle)의 유무
 
 ---
 
 - **순환 그래프 (Cycle Graph)**
-    
-    ![**단순 경로의 시작 정점과 종료 정점이 동일한 경우**](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3b916a9e-48fb-4522-a3ac-c2c6cfc461cc/Untitled.png)
-    
+    <img src="../assets/week4_11.png"/>
     **단순 경로의 시작 정점과 종료 정점이 동일한 경우**
     
 
 - **비순환 그래프 (Acycle Graph)**
     - 순환 그래프의 반대 (사이클이 없는 그래프)
-    - 여기서, `**트리**` 는 비순환 그래프이다!
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/17ae3fad-dd6a-4dc2-b588-1f0823508e72/Untitled.png)
+    - 여기서, `트리` 는 비순환 그래프이다!
+    <img src="../assets/week4_12.png"/>
     
 
 ### 정점의 개수 vs 간선의 개수
 
 - 희소 그래프 (Sparse Graph)
     - 정점(node)의 개수보다 간선(edge)의 개수가 작은 그래프
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/be11a215-002a-4cbb-b860-fe8c520cedad/Untitled.png)
+    <img src="../assets/week4_21.png"/>
     
 - 밀집 그래프 (Dense Graph)
-    - 정점(node)의 개수보다 간선(edge) 개수가 많은 그래프
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2d3a81e4-7bb7-4549-a5b1-d8f4364a9001/Untitled.png)
+    - 정점(node)의 개수보다 간선(edge) 개수가 많은 그래프    
+    <img src="../assets/week4_22.png"/>
     
 
 ### 그 외
@@ -118,15 +118,15 @@
 - **가중치 그래프(Weighted Graph)**
     - 그래프를 구성하는 간선에 가중치가 할당된 그래프
     - `네트워크(Network)` 라고도 한다. ex. 통신망의 사용료, 도로의 길이, ..
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff0be010-2fa1-4e23-a1d3-341d3363fbfe/Untitled.png)
+    <img src="../assets/week4_31.png"/>
     
 - **완전 그래프 (Complete Graph)**
     - 그래프에 속해 있는 모든 정점이 하나의 간선으로 연결되어 있는 그래프!
     - 무방향 완전 그래프인 경우, 정점이 n개일 때, 간선의 수 `n*(n-1)/2`
+    <img src="../assets/week4_32.png"/>
+
     
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6119c8f9-9312-4fa0-9239-089e46790512/Untitled.png)
-    
+<br>
 
 ## 🤜 구현
 
@@ -136,9 +136,11 @@
 
 “연결 리스트를 사용하는 방법” → 가장 일반적인 방법
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b747bd1e-3d73-4d52-bae7-357ce36e545b/Untitled.png)
+<img src="../assets/week4_2.png"/>
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e7f05dd3-3cca-4412-b397-1e9404ce4d13/Untitled.png)
+<img src="../assets/week4_3.png"/>
+
+<br>
 
 - `정점의 인접 리스트`를 이용하여 구현하는 방법이다.
 - `**모든 정점(노드)의 인접 정점을 리스트로 만드는 방법**이다. 배열과 배열의 각 인덱스마다 존재하는 또다른 리스트(배열, 동적 가변 크기 배열(ArrayList), 연결 리스트(Linked List) 등)를 이용하여 인접 리스트를 표현한다.
@@ -159,7 +161,7 @@
 
 “정방 행렬을 사용하는 방법”
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/59e7971c-c32a-4bf8-a3dd-270e63e54043/Untitled.png)
+<img src="../assets/week4_4.png"/>
 
 - 그래프에 V개의 정점이 있을 때, **V 크기의 정방행렬을 이용하여 구현하는 방법**이다.
     
@@ -210,7 +212,9 @@
         - 어떤 노드에 인접한 모든 노드들을 찾는다면, 인접 리스트같은 경우, 그 정점에 해당한 리스트만 확인하면 되지만, 인접 행렬은 V번을 끝까지 확인해야할 것이다.
     - 그래프에 존재하는 모든 간선의 수는 **O(V^ 2)** 안에 알 수 있다. (인접 행렬 전체를 조사하는 방법)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/154c317c-e39f-44ef-8a12-cb2024890ad6/Untitled.png)
+<img src="../assets/week4_5.png"/>
+
+<br>
 
 ## 🤜 그래프 탐색 (순회)
 
@@ -243,6 +247,9 @@ DFS와 BFS 모두 **인접 리스트**로 구현한 경우엔 ***O(V + E)*** 
 
 </aside>
 
+
+<br>
+
 ## 그래프, 트리 차이
 
 ---
@@ -254,7 +261,11 @@ DFS와 BFS 모두 **인접 리스트**로 구현한 경우엔 ***O(V + E)*** 
 
 - 그래프는 경로가 여러가지 있을 수 있지만, 트리같은 경우는 경로가 하나밖에 없다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f83f5706-455a-4744-9438-07a18af976e4/Untitled.png)
+<img src="../assets/week4_6.png"/>
+
+
+<br>
+
 
 > ref
 > 
